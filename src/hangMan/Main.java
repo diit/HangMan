@@ -128,7 +128,7 @@ public class Main extends JFrame implements ActionListener{
 
 	public void setupFrame(){
 		setTitle("Hangman - Davis Amyot");
-		setSize(750, 487);
+		setSize(491, 487);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null); //This will center the JFrame in the middle of the screen
@@ -248,7 +248,6 @@ public class Main extends JFrame implements ActionListener{
 		}else{ //Letter picked
 			check(cmd);
 		}
-
 	}
 
 	public static void main(String[] args){
@@ -256,5 +255,4 @@ public class Main extends JFrame implements ActionListener{
 		new Main();
 
 	}
-
 }
