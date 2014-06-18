@@ -180,7 +180,7 @@ public class Main extends JFrame implements ActionListener{
 	}
 	public void rightAnswer(String ltr){
 		score++;
-		if(score==currentWord.length()){
+		if(score==currentWord.length()-currentWord.replaceAll("[a-z]", "").length()){
 			win();
 		}else{
 			StringBuilder tmp = new StringBuilder(output.getText()); //Allows updating string by index
