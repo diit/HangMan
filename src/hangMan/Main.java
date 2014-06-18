@@ -180,7 +180,7 @@ public class Main extends JFrame implements ActionListener{
 	}
 	public void rightAnswer(String ltr){
 		score++;
-		if(score==currentWord.length()-currentWord.replaceAll("[a-z]", "").length()){
+		if(score==currentWord.length()-currentWord.replaceAll("[a-z]", "").length()){ //Ignores spaces and checks for win
 			win();
 		}else{
 			StringBuilder tmp = new StringBuilder(output.getText()); //Allows updating string by index
@@ -244,7 +244,8 @@ public class Main extends JFrame implements ActionListener{
 				}else{
 					JOptionPane.showMessageDialog(this, "Sorry, you didnt guess the correct question.");
 				}
-			}catch(NullPointerException xe){}//User closed dialogue with no input	
+			}catch(NullPointerException xe){}//User closed dialogue with no input
+			guess.setEnabled(true); //Allows user to guess word
 		}else{ //Letter picked
 			check(cmd);
 		}
